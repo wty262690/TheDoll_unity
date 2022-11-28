@@ -36,17 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\script\windchime.cs" />
      <Compile Include="Assets\script\text.cs" />
-     <Compile Include="Assets\script\animationcontorl.cs" />
-     <Compile Include="Assets\script\fade.cs" />
-     <Compile Include="Assets\script\music.cs" />
-     <Compile Include="Assets\script\Interactable.cs" />
      <Compile Include="Assets\script\menuanimation.cs" />
      <Compile Include="Assets\script\camercontrl.cs" />
-     <Compile Include="Assets\script\menubuttonmanagement.cs" />
-     <Compile Include="Assets\script\windchime.cs" />
      <Compile Include="Assets\script\VRcontrl.cs" />
+     <Compile Include="Assets\script\Interactable.cs" />
+     <Compile Include="Assets\script\menubuttonmanagement.cs" />
+     <Compile Include="Assets\script\music.cs" />
+     <Compile Include="Assets\script\fade.cs" />
      <Compile Include="Assets\script\changescen.cs" />
+     <Compile Include="Assets\script\animationcontorl.cs" />
      <Compile Include="Assets\text_parent.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

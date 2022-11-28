@@ -105,6 +105,8 @@ public class animationcontorl : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
         }
+        GameObject.Find("text1").GetComponent<text_parent>().fadeout();
+        GameObject.Find("text2").GetComponent<text_parent>().fadeout();
         while(goList[13]. GetComponent<SpriteRenderer>().color.a>0f){
             int[] delete = {0,5,6,12,13};
             for (int i=0; i<5; i++){
@@ -121,6 +123,9 @@ public class animationcontorl : MonoBehaviour
         }
         finish=1;
     }
+
+
+
     IEnumerator anima2(){
         finish=-1;
         listUPdate(2,1,2);
