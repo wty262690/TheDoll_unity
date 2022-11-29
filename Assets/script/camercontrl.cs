@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class camercontrl : MonoBehaviour
 {
-    Vector3 pos=  new Vector3(29.2999992f, 6.5f, 3.0f);
-    Vector3 rot=  new Vector3(2.277f, -94.318f, -0.873f);
+    Vector3 pos;//=  new Vector3(29.2999992f, 6.5f, 3.0f);
+    Vector3 rot;//=  new Vector3(2.277f, -94.318f, -0.873f);
     float move=0.1f;
     float posmove = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
+        pos= this.transform.position;
+        rot= new Vector3 (transform.rotation.x,transform.rotation.y,transform.rotation.z);
         //gameObject.transform.rotation=
     }
 
