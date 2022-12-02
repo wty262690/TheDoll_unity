@@ -15,7 +15,7 @@ using UnityEngine;
 */
 /* 2
 1: boss
-2: mrs
+2  - 4 : mrs
 */
 
 public class animationcontorl : MonoBehaviour
@@ -128,7 +128,7 @@ public class animationcontorl : MonoBehaviour
 
     IEnumerator anima2(){
         finish=-1;
-        listUPdate(2,1,2);
+        listUPdate(2,1,4);
         for (int i=0; i<=1; i++){
             while(goList[i]. GetComponent<SpriteRenderer>().color.a<1f){
                 goList[i]. GetComponent<SpriteRenderer>().color=this.GetComponent<fade>().fadein(10f/i,goList[i]. GetComponent<SpriteRenderer>().color);
@@ -136,6 +136,17 @@ public class animationcontorl : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(0.1f);
+            while(goList[1]. GetComponent<SpriteRenderer>().color.a>0f){
+                goList[2]. GetComponent<SpriteRenderer>().color=this.GetComponent<fade>().fadein(10f,goList[2]. GetComponent<SpriteRenderer>().color);
+                goList[1]. GetComponent<SpriteRenderer>().color=this.GetComponent<fade>().fadeout(10f,goList[1]. GetComponent<SpriteRenderer>().color);
+                yield return new WaitForSeconds(0.1f);
+            }
+        yield return new WaitForSeconds(0.1f);
+            while(goList[2]. GetComponent<SpriteRenderer>().color.a>0f){
+                goList[3]. GetComponent<SpriteRenderer>().color=this.GetComponent<fade>().fadein(10f,goList[3]. GetComponent<SpriteRenderer>().color);
+                goList[2]. GetComponent<SpriteRenderer>().color=this.GetComponent<fade>().fadeout(10f,goList[2]. GetComponent<SpriteRenderer>().color);
+                yield return new WaitForSeconds(0.1f);
+            }
     }
 
     void listUPdate(int index, int from, int to){
